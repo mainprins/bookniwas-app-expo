@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }) => {
                 }
             );
             setIsAuthenticated(true);
-            setAuthUser(res.data.authUser);
+            setAuthUser(res.data?.authUser);
             await AsyncStorage.setItem('token', res.data?.token);
             setToken(res.data?.token)
             Toast.show({

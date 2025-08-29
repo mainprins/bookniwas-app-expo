@@ -33,7 +33,7 @@ export default function HomePage() {
             Authorization: `Bearer ${token}`
           }
         });
-        setTotalBooks(res.data.allBooks.length);
+        setTotalBooks(res.data?.allBooks?.length);
       } catch (error) {
         console.log("Error while fetching books");
 
@@ -50,7 +50,7 @@ export default function HomePage() {
             Authorization: `Bearer ${token}`
           }
         });
-        setTotalAvailableBooks(res.data.availableBooks.length);
+        setTotalAvailableBooks(res.data?.availableBooks?.length);
       } catch (error) {
         console.log("Error while fetching books");
 
@@ -71,7 +71,7 @@ export default function HomePage() {
             Authorization: `Bearer ${token}`
           }
         });
-        setTotalBorrows(res.data.allBorrows.length);
+        setTotalBorrows(res.data?.allBorrows?.length);
       } catch (error) {
         console.log("Error while fetching borrows");
 

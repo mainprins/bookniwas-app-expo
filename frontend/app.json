@@ -37,6 +37,19 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cb074161-38bc-4e1e-80d6-a81864c30dab"
+      }
+    },
+    "owner": "princebajgain",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/cb074161-38bc-4e1e-80d6-a81864c30dab"
     }
   }
 }
