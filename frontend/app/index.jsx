@@ -107,18 +107,18 @@ export default function HomePage() {
   return (
 
     <View style={{ backgroundColor: "#181C14", flex: 1, padding: 10, gap: 20 }}>
-      <Text style={{ color: "#697565", fontSize: '20px', letterSpacing: 1 }}>Hello, <Text style={{ color: '#ECDFCC' }}>{authUser.fullname.split(' ')[0]}</Text></Text>
+      <Text style={{ color: "#697565", fontSize: 20, letterSpacing: 1 }}>Hello, <Text style={{ color: '#ECDFCC' }}>{authUser?.fullname.split(' ')[0]}</Text></Text>
       <View style={{ backgroundColor: '#3C3D37', padding: 10, borderRadius: 10, flexDirection: 'row', width: 300, gap: 20, alignItems: 'center' }}>
         <AntDesign name="book" size={34} color="#ECDFCC" />
         <View style={{ backgroundColor: '#ECDFCC', borderRadius: 5, width: 200, padding: 10 }}>
-          <Text style={{ color: '#181C14', fontSize: 'large', letterSpacing: 1 }}>Total Books</Text>
+          <Text style={{ color: '#181C14', fontSize: 18, letterSpacing: 1 }}>Total Books</Text>
           <Text>{totalBooks}</Text>
         </View>
       </View>
       <View style={{ backgroundColor: '#3C3D37', padding: 10, borderRadius: 10, flexDirection: 'row', width: 300, gap: 20, alignItems: 'center' }}>
         <MaterialIcons name="event-available" size={34} color="#ECDFCC" />
         <View style={{ backgroundColor: '#ECDFCC', borderRadius: 5, width: 200, padding: 10 }}>
-          <Text style={{ color: '#181C14', fontSize: 'large', letterSpacing: 1 }}>Available Books</Text>
+          <Text style={{ color: '#181C14', fontSize: 18, letterSpacing: 1 }}>Available Books</Text>
           <Text>{totalAvailableBooks}</Text>
         </View>
       </View>
@@ -126,14 +126,14 @@ export default function HomePage() {
 
         <Ionicons name="file-tray-stacked-sharp" size={34} color="#ECDFCC" />
         <View style={{ backgroundColor: '#ECDFCC', borderRadius: 5, width: 200, padding: 10 }}>
-          <Text style={{ color: '#181C14', fontSize: 'large', letterSpacing: 1 }}>Total Borrows</Text>
+          <Text style={{ color: '#181C14', fontSize: 18, letterSpacing: 1 }}>Total Borrows</Text>
           <Text>{totalBorrows}</Text>
         </View>
       </View>
       {series.length > 0 && <View style={{ display: 'flex', justifyContent: "center", alignItems: 'center', gap: 20 }}>
 
         <PieChart widthAndHeight={widthAndHeight} series={series} />
-        <Text style={{ fontSize: '15px', color: '#ECDFCC', letterSpacing: 1 }}>Graphical Representation</Text>
+        <Text style={{ fontSize: 20, color: '#ECDFCC', letterSpacing: 1 }}>Graphical Representation</Text>
         <View style={{ display: 'flex', flexDirection: 'row', gap: 20 }}>
           <View style={{ gap: 10, justifyContent: "center", alignItems: 'center' }}>
             <View style={{ backgroundColor: "#3C3D37", width: 20, height: 20 }}>

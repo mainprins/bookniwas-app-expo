@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+# Bookniwas App 📚
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Expo](https://img.shields.io/badge/Expo-React%20Native-blue)](https://expo.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-Express-green)](https://nodejs.org/)
 
-## Get started
+Bookniwas is a **full-stack library management application** built with **Expo (React Native)** for the frontend and **Express.js** for the backend. Users can browse books, borrow/return books, and manage their library account from a mobile app.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+- **User Authentication**
+  - Sign up and log in with JWT
+  - Persist login sessions with AsyncStorage
+- **Book Management**
+  - View all books in the library
+  - Track available books
+  - Borrow and return books
+- **Dashboard**
+  - Total books, borrowed books, and available books
+  - Graphical representation using pie charts
+- **Notifications**
+  - Toast messages for success and error feedback
+- **Cross-Platform Mobile App**
+  - Works on both iOS and Android via Expo Go
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Frontend:** React Native, Expo, React Navigation, Axios, AsyncStorage
+- **Backend:** Node.js, Express.js, MongoDB, JWT
+- **Other Libraries:** React Native Vector Icons, React Native Pie Chart, React Native Toast Message
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Folder Structure
 
-When you're ready, run:
+bookniwas/
+├── backend/ # Express backend
+├── frontend/ # Expo React Native frontend
+├── README.md
+└── ...
+
+
+---
+
+## Backend Setup
+
+1. Navigate to the backend folder:
 
 ```bash
-npm run reset-project
+cd backend
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Create a .env file
 
-## Learn more
+PORT=5000
+MONGO_URI=<your_mongo_db_connection_string>
+JWT_SECRET=<your_secret_key>
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm run dev
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## Frontend Setup
 
-Join our community of developers creating universal apps.
+```bash
+cd frontend
+npm install
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Create a file containing environment variables.
